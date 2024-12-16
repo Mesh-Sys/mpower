@@ -1,7 +1,7 @@
 pkgname=mpower
 pkgver=1.0
 pkgrel=1
-pkgdesc="A POWER MANAGER BY FOR LINUX"
+pkgdesc="A POWER MANAGER FOR LINUX"
 arch=('x86_64')
 license=('custom')
 depends=('gcc' 'gcc-libs')
