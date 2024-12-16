@@ -7,11 +7,11 @@ license=('custom')
 depends=('gcc' 'gcc-libs')
 conflicts=('power-profiles-daemon')
 source=("mpower_${pkgver}_x64.tar.gz")
-sha256sums=('de66708e82b289c43d1cfd1a008307d9a06c1b76016a89ac4e0e7acfccf2885f')
+sha256sums=('none')
 
 build() {
 
-	gcc -O2 -DNDEBUG -Wall "$srcdir"/mpower_${pkgver}_x64/$pkgname.c -o "$srcdir"/mpower_${pkgver}_x64/$pkgname
+	g++ -O3 -DNDEBUG -Wall "$srcdir"/mpower_${pkgver}_x64/$pkgname.cpp -o "$srcdir"/mpower_${pkgver}_x64/$pkgname
 
 }
 
@@ -26,7 +26,7 @@ package() {
 	msg2 "coping files*******"
 
 	cp "$srcdir"/mpower_${pkgver}_x64/$pkgname "$pkgdir"/usr/bin/$pkgname
-	cp "$srcdir"/mpower_${pkgver}_x64/$pkgname.conf "$pkgdir"/etc/$pkgname.conf
+	cp "$srcdir"/mpower_${pkgver}_x64/$pkgname.json "$pkgdir"/etc/$pkgname.json
 	cp "$srcdir"/mpower_${pkgver}_x64/$pkgname.service "$pkgdir"/usr/lib/systemd/system/$pkgname.service
 
 	msg2 "done coping files********"

@@ -1,5 +1,5 @@
 [Unit]
-Description=MPOWER SERVICE ON ARCH LINUX
+Description=MPOWER CPP SERVICE ON ARCH LINUX
 After=multi-user.target
 
 [Service]
